@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Fo2sh YouTube Downloader",
+  "version": "1.1.1",
+  "description": "Hover any YouTube video and download it in the quality you choose, or just the audio. Works with yt-dlp on your Mac.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqzIbA1fuaaDH5OXD1h2N8ELtwxnUTQ7GuqyUG5ccCngL/BKyZuApXuLvBY+cf6xnXhL65Hc2pgTPDTmxSBAGL4W8or5be5yIsRjrSaL/eB2Ythdf4JkBBcRPaW1qmYJNot957PC2oi5xYNbC/Qc1UZfhUqy+RPzqzt4lqKgP6e6EFWwvZSQfJYyRY228fsAceBrRb7Zz7FDAal1oN0xTebJsHNOPvEmXCgP7dlHT9EIyPrtc+T7ar+JRzGpme8SN0ohNYFNE7ty+56qwgqnSNpAEZTJHWpcN24MfDEE8lB56HMqXqM5V6cKzD2C0guPC7YYPGtpUSQILFeXNjffnNQIDAQAB",
+  "permissions": [
+    "nativeMessaging",
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/*",
+        "*://m.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Fo2sh YouTube Downloader",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

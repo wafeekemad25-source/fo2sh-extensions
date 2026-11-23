@@ -1,0 +1,91 @@
+.fyt-bar {
+  position: fixed;
+  z-index: 2147483647;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.92);
+  transform-origin: top right;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.fyt-bar.fyt-show { opacity: 1; pointer-events: auto; transform: scale(1); }
+.fyt-b {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 32px;
+  padding: 0 12px 0 10px;
+  border: 0;
+  border-radius: 16px;
+  background: #ff0033;
+  color: #fff;
+  font: 600 13px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+.fyt-b:hover { background: #cc0029; }
+
+.fyt-menu {
+  position: fixed;
+  z-index: 2147483647;
+  width: 250px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 6px;
+  border-radius: 12px;
+  background: #1f1f1f;
+  color: #f1f1f1;
+  font: 500 13px/1.3 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  direction: rtl;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.fyt-menu.fyt-show { display: block; }
+.fyt-title {
+  padding: 6px 8px 8px;
+  font-weight: 600;
+  direction: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  border-bottom: 1px solid #333;
+  margin-bottom: 4px;
+}
+.fyt-sec { padding: 8px 8px 4px; color: #aaa; font-size: 11px; }
+.fyt-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.fyt-item:hover { background: #333; }
+.fyt-item b { color: #aaa; font-weight: 500; direction: ltr; }
+.fyt-item i { color: #f7b500; font-style: normal; font-size: 11px; }
+.fyt-load { padding: 4px 8px 6px; color: #aaa; font-size: 12px; }
+.fyt-err { padding: 6px 8px; color: #ff8a8a; font-size: 12px; line-height: 1.5; }
+
+.fyt-toast {
+  position: fixed;
+  z-index: 2147483647;
+  left: 50%;
+  bottom: 28px;
+  transform: translate(-50%, 20px);
+  max-width: 80vw;
+  padding: 11px 18px;
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+  font: 500 14px/1.3 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  direction: rtl;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.fyt-toast.fyt-show { opacity: 1; transform: translate(-50%, 0); }
+.fyt-toast[data-kind="ok"] { background: #0a7d3b; }
+.fyt-toast[data-kind="err"] { background: #b3261e; }
