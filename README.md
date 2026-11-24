@@ -29,4 +29,6 @@
 curl -fsSL https://raw.githubusercontent.com/wafeekemad25-source/fo2sh-extensions/main/update.command | bash
 ```
 
+التحديث بينزّل بس الملفات اللي اتغيرت، فبيخلص في ثواني. أول مرة بس بتاخد وقت أطول (حوالي 32MB).
+
 الملفات اللي بتنزل بتتحفظ في تنزيلات Chrome، جوه فولدر لكل موقع: `Downloads/Pinterest`، `Downloads/Reddit`، `Downloads/Instagram`، `Downloads/YouTube`.
